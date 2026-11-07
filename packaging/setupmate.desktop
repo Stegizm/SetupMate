@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=SetupMate
+GenericName=Linux Setup Guide
+Comment=Güvenli Linux kurulum rehberi
+Exec=setupmate
+Icon=setupmate
+Terminal=false
+Categories=System;Utility;
+Keywords=linux;package;install;setup;guide;
+StartupWMClass=setupmate

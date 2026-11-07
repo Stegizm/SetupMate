@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="SetupMate">
+  <rect x="0" y="0" width="256" height="256" rx="61" fill="#2DD4BF"/>
+  <g stroke="#04231F" stroke-width="16" stroke-linecap="round">
+    <line x1="67" y1="88" x2="189" y2="88"/>
+    <line x1="67" y1="128" x2="189" y2="128"/>
+    <line x1="67" y1="168" x2="189" y2="168"/>
+  </g>
+  <g fill="#04231F">
+    <circle cx="143" cy="88" r="21"/>
+    <circle cx="106" cy="128" r="21"/>
+    <circle cx="157" cy="168" r="21"/>
+  </g>
+</svg>

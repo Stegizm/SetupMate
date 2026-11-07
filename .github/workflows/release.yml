@@ -1,0 +1,67 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  appimage:
+    name: AppImage (x86_64)
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install system deps (egui/winit + AppImage)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            pkg-config file curl \
+            libxkbcommon-dev libwayland-dev libgl1-mesa-dev libegl1-mesa-dev \
+            libx11-dev libxcursor-dev libxrandr-dev libxi-dev
+
+      - name: Install Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
+
+      - uses: Swatinem/rust-cache@v2
+
+      - name: Build AppImage
+        env:
+          SETUPMATE_VERSION: ${{ github.ref_name }}
+        run: |
+          VERSION="${SETUPMATE_VERSION#v}"
+          SETUPMATE_VERSION="$VERSION" ./packaging/build-appimage.sh
+
+      - name: Upload AppImage
+        uses: actions/upload-artifact@v4
+        with:
+          name: appimage
+          path: dist/SetupMate-*.AppImage
+
+  publish:
+    name: Publish GitHub release
+    needs: appimage
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download AppImage
+        uses: actions/download-artifact@v4
+        with:
+          name: appimage
+          path: dist
+
+      - name: Generate SHA256SUMS
+        run: |
+          cd dist
+          sha256sum SetupMate-*.AppImage > SHA256SUMS
+          cat SHA256SUMS
+
+      - name: Create release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            dist/SetupMate-*.AppImage
+            dist/SHA256SUMS
+          generate_release_notes: true

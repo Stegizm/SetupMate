@@ -1,0 +1,69 @@
+# Kategori tanımları.
+# Bu dosya paket adı içermez; yalnızca kullanıcıya gösterilecek grupları tanımlar.
+# `description` alanı yeni başlayanlara hitap edecek şekilde sade ve örneklidir;
+# GUI'de kategori çipinin ipucu (tooltip) ve seçili kategori açıklaması olarak görünür.
+
+[[categories]]
+id = "basics"
+name = "Temel Araçlar"
+description = "İnternetten dosya indirmek, arşiv açmak, sistemi izlemek gibi günlük işler için küçük yardımcı programlar. Çoğu bilgisayarda güvenle kullanılır."
+
+[[categories]]
+id = "development"
+name = "Geliştirme"
+description = "Kod yazmak, projeleri indirmek ve programları derlemek isteyenler için araçlar. Yazılımla uğraşmıyorsan bu kategoriyi atlayabilirsin."
+
+[[categories]]
+id = "gaming"
+name = "Oyun"
+description = "Oyunlarda daha iyi performans ve ekranda FPS/sıcaklık göstergesi sağlayan araçlar. Steam gibi ek depo gerektirenler bu sürümde yer almaz."
+
+[[categories]]
+id = "multimedia"
+name = "Multimedya"
+description = "Video ve müzik oynatmak, format dönüştürmek, ekran kaydı almak ve fotoğraf düzenlemek için uygulamalar."
+
+[[categories]]
+id = "office"
+name = "Ofis"
+description = "Belge, tablo, sunum hazırlamak ve e-posta okumak için günlük uygulamalar. Okul ve iş işleri için ideal."
+
+[[categories]]
+id = "gpu"
+name = "GPU / Sürücüler"
+description = "Ekran kartı sürücüleri. Yanlış sürüm sistem sorunlarına yol açabildiği için bu sürümde yalnızca rehber olarak gösterilir, kurulmaz."
+
+[[categories]]
+id = "backup"
+name = "Yedekleme & Senkron"
+description = "Dosyalarını yedeklemek, harici disk veya bulutla eşitlemek için araçlar. Önemli belgelerini kaybetmemek isteyen herkes için."
+
+[[categories]]
+id = "privacy"
+name = "Gizlilik & Güvenlik"
+description = "Parolalarını güvenle saklamak, dosya ve e-posta şifrelemek ve uzak sunucuya güvenli bağlanmak için araçlar."
+
+[[categories]]
+id = "terminal"
+name = "Terminal Yardımcıları"
+description = "Terminalde gezinmeyi ve dosya listesini kolaylaştıran küçük yardımcılar. Komut satırını sık kullanıyorsan dene."
+
+[[categories]]
+id = "network"
+name = "Ağ Araçları"
+description = "Ağ bağlantısını test etmek, gecikmeyi ölçmek ve alan adı sorgulamak için küçük araçlar. İnternet sorunlarını anlamak isteyenler için."
+
+[[categories]]
+id = "audio"
+name = "Ses"
+description = "Ses seviyesini ayarlamak, mikrofon ve hoparlör yönlendirmek ve kayıt düzenlemek için uygulamalar."
+
+[[categories]]
+id = "capture"
+name = "Ekran Görüntüsü"
+description = "Ekran görüntüsü almak ve paylaşmak için hafif araçlar. Wayland ve X11 için ayrı seçenekler vardır."
+
+[[categories]]
+id = "containers"
+name = "Konteyner"
+description = "Uygulamaları sistemden yalıtarak çalıştırmak için konteyner araçları. Geliştirme ve sunucu işlerinde kullanılır."

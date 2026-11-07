@@ -1,0 +1,13 @@
+# Rust build output
+/target/
+/dist/
+
+# Local secrets: opencode.json contains a plaintext API key.
+opencode.json
+.env
+.env.*
+
+# Editor/OS noise
+*.swp
+*.swo
+.DS_Store

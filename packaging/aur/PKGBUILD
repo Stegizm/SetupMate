@@ -1,0 +1,39 @@
+# Maintainer: stegizm <stegizm@users.noreply.github.com>
+pkgname=setupmate
+pkgver=0.2.0
+pkgrel=1
+pkgdesc="Güvenli Linux kurulum rehberi (GUI)"
+arch=('x86_64' 'aarch64')
+url="https://github.com/stegizm/SetupMate"
+license=('MIT')
+depends=(
+  'gcc-libs'
+  'glibc'
+  'fontconfig'
+  'libx11'
+  'libxcursor'
+  'libxrandr'
+  'libxi'
+  'libxkbcommon'
+  'wayland'
+  'mesa'
+)
+makedepends=('rust' 'gcc' 'pkgconf')
+source=("$pkgname-$pkgver.tar.gz::$url/archive/refs/tags/v$pkgver.tar.gz")
+sha256sums=('SKIP')
+
+build() {
+  cd "$srcdir/SetupMate-$pkgver"
+  cargo build --release --locked -p setupmate-gui
+}
+
+package() {
+  cd "$srcdir/SetupMate-$pkgver"
+
+  install -Dm755 target/release/setupmate-gui "$pkgdir/usr/bin/setupmate"
+  install -Dm644 packaging/setupmate.desktop \
+    "$pkgdir/usr/share/applications/setupmate.desktop"
+  install -Dm644 packaging/setupmate.svg \
+    "$pkgdir/usr/share/icons/hicolor/scalable/apps/setupmate.svg"
+  install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+}

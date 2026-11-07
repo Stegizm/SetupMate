@@ -1,0 +1,35 @@
+# Donanım/oturum profilleri.
+# Bu dosya paket adı içermez; yalnızca kategori seçimini yönlendirir.
+# GUI'deki "Önerilen" görünümü, eşleşen profillerin category_ids birleşimini kullanır.
+# `description` sade dille yazılır; yeni başlayan kullanıcıya hangi kategoriyi
+# neden önerdiğimizi açıklar.
+
+[[profiles]]
+id = "laptop"
+name = "Dizüstü"
+description = "Taşınabilir bilgisayar. Güç ve pil dengesi için temel ve multimedya araçları önerilir."
+category_ids = ["basics", "multimedia"]
+
+[[profiles]]
+id = "desktop"
+name = "Masaüstü"
+description = "Sabit bilgisayar. Günlük işler ve medya için temel araçlar önerilir."
+category_ids = ["basics", "multimedia"]
+
+[[profiles]]
+id = "nvidia"
+name = "NVIDIA ekran kartı"
+description = "NVIDIA sürücüleri riskli; bu sürümde yalnızca rehber olarak gösterilir."
+category_ids = ["gpu"]
+
+[[profiles]]
+id = "amd"
+name = "AMD ekran kartı"
+description = "AMD sürücüleri çoğu zaman açık kaynak sürücüyle gelir; yine de yalnızca rehber."
+category_ids = ["gpu"]
+
+[[profiles]]
+id = "intel"
+name = "Intel ekran kartı"
+description = "Intel ekran kartları genelde kutudan çıktığı gibi çalışır; rehber bilgi amaçlıdır."
+category_ids = ["gpu"]
