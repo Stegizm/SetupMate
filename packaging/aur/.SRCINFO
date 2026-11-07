@@ -20,6 +20,6 @@ pkgbase = setupmate
 	depends = wayland
 	depends = mesa
 	source = setupmate-0.1.0.tar.gz::https://github.com/Stegizm/SetupMate/archive/refs/tags/v0.1.0.tar.gz
-	sha256sums = SKIP
+	sha256sums = 1c4066fce1aee84ec8115830d54d7c207e86d4a04c804c6c2f823f25a6c5f57a
 
 pkgname = setupmate

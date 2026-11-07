@@ -38,8 +38,14 @@ Release tamamlandıktan sonra güncellemeyi doğrula:
 
 ## 3. AUR paketi
 
-`packaging/aur/PKGBUILD` kaynak paketidir. Etiket yayınlandıktan sonra tarball
-özetini yaz ve doğrula:
+`packaging/aur/PKGBUILD` kaynak paketidir. `v0.1.0` etiketi için tarball özeti
+yazıldı ve `makepkg --verifysource` ile doğrulandı:
+
+```text
+sha256sums = 1c4066fce1aee84ec8115830d54d7c207e86d4a04c804c6c2f823f25a6c5f57a
+```
+
+Yeni bir sürümde özeti yenile:
 
 ```bash
 cd packaging/aur

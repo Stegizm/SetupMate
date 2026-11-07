@@ -81,15 +81,13 @@ planı kopyalayıp terminalde `sudo` ile çalıştırman için yönlendirme gös
 
 ### AppImage (önerilen)
 
-```bash
-# Releases sayfasından indir
-curl -fsSLO https://github.com/Stegizm/SetupMate/releases/latest/download/SetupMate-0.1.0-x86_64.AppImage
-curl -fsSLO https://github.com/Stegizm/SetupMate/releases/latest/download/SHA256SUMS
+[Releases](https://github.com/Stegizm/SetupMate/releases/latest) sayfasından
+`SetupMate-<sürüm>-x86_64.AppImage` ve `SHA256SUMS` dosyalarını indir, sonra:
 
-# Doğrula ve çalıştır
+```bash
 sha256sum -c SHA256SUMS
-chmod +x SetupMate-0.1.0-x86_64.AppImage
-./SetupMate-0.1.0-x86_64.AppImage
+chmod +x SetupMate-*.AppImage
+./SetupMate-*.AppImage
 ```
 
 AppImage tek dosyadır; kurulum gerektirmez ve `data/` dizinine ihtiyaç duymaz
@@ -121,8 +119,8 @@ cargo build --release -p setupmate-gui
 AppImage kurulumları:
 
 ```bash
-./SetupMate-0.1.0-x86_64.AppImage --check-update   # yeni sürüm var mı?
-./SetupMate-0.1.0-x86_64.AppImage --update         # son sürüme geç
+./SetupMate-*.AppImage --check-update   # yeni sürüm var mı?
+./SetupMate-*.AppImage --update         # son sürüme geç
 ```
 
 `--update` yalnızca `$APPIMAGE` yolundaki dosyayı değiştirir: yeni AppImage
