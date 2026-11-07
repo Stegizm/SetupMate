@@ -59,7 +59,7 @@ Aileye göre farklı adlar:
 ## Kapsam dışı / ek doğrulama bekleyenler
 
 - **Steam ve benzeri:** Arch'ta `multilib`, Debian'da `non-free`, Fedora/openSUSE'te
-  ek repo gerektirdiği için v0.2 kapsamı dışıdır; paket adı yayınlanmaz.
+  ek repo gerektirdiği için v0.1 kapsamı dışıdır; paket adı yayınlanmaz.
 - **vkbasalt:** Arch resmi depolarında yok (AUR); Fedora dist-git'te yok. Yalnızca
   Debian ve openSUSE için eklendi.
 - **lutris:** Debian stable'da yok; Alpine'de yok. Diğer ailelerde var.
@@ -76,5 +76,5 @@ Aileye göre farklı adlar:
 - **distrobox:** Void'de yok (Alpine'de var).
 - **obs-studio / mangohud:** Void'de yok.
 - **clang:** Alpine paket indeksinde yok.
-- **GPU sürücü paketleri (nvidia/amd/intel):** v0.2'de de yalnızca rehber; paket adı
+- **GPU sürücü paketleri (nvidia/amd/intel):** v0.1'de de yalnızca rehber; paket adı
   yayınlanmaz.

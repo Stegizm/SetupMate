@@ -10,8 +10,8 @@ SetupMate is a safety-first, GUI-based helper for new Linux users. It detects th
 - Unknown, ambiguous, distro-specific, driver-related, or repo/AUR/RPM Fusion/PPA/Flatpak-remote names must be `TODO_VERIFY`.
 - Never generate an install command for `TODO_VERIFY`.
 - Default to a preview plan. Install only after explicit user approval (the GUI approval dialog is that gate).
-- v0.2 must not: remove packages, add repos, import signing keys, edit bootloader/fstab/systemd, load or change kernel modules, overwrite configs, or modify dotfiles.
-- GPU driver packages are high-risk: guide-only in v0.2 as well.
+- v0.1 must not: remove packages, add repos, import signing keys, edit bootloader/fstab/systemd, load or change kernel modules, overwrite configs, or modify dotfiles.
+- GPU driver packages are high-risk: guide-only in v0.1 as well.
 - Keep core logic independent of the GUI.
 - Library code must not panic; use `Result`. Avoid `unwrap`/`expect` outside tests.
 - Do not add dependencies without user approval.

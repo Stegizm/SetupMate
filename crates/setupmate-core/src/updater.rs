@@ -16,7 +16,7 @@ use crate::sha256::Sha256;
 use crate::sys::find_in_path;
 
 /// Default GitHub repository slug. Override at runtime with `SETUPMATE_REPO`.
-pub const DEFAULT_REPO: &str = "stegizm/SetupMate";
+pub const DEFAULT_REPO: &str = "Stegizm/SetupMate";
 /// Environment variable that overrides the repository slug.
 pub const REPO_ENV: &str = "SETUPMATE_REPO";
 /// Environment variable AppImage sets to the path of the running image.
@@ -115,7 +115,7 @@ pub fn select_asset(checksums: &str, arch: &str) -> Option<(String, String)> {
     })
 }
 
-/// Extracts `0.2.0` from `SetupMate-0.2.0-x86_64.AppImage`.
+/// Extracts `0.1.0` from `SetupMate-0.1.0-x86_64.AppImage`.
 #[must_use]
 pub fn version_from_asset(name: &str) -> Option<String> {
     let stem = name.strip_prefix("SetupMate-")?.strip_suffix(".AppImage")?;
@@ -344,24 +344,24 @@ mod tests {
         let second = "b".repeat(64);
         let third = "c".repeat(64);
         let checksums = format!(
-            "\n{second}  SetupMate-0.2.0-x86_64.AppImage\n{third}  SetupMate-0.2.0-aarch64.AppImage\n"
+            "\n{second}  SetupMate-0.1.0-x86_64.AppImage\n{third}  SetupMate-0.1.0-aarch64.AppImage\n"
         );
         let (name, hash) = select_asset(&checksums, "x86_64").unwrap();
-        assert_eq!(name, "SetupMate-0.2.0-x86_64.AppImage");
+        assert_eq!(name, "SetupMate-0.1.0-x86_64.AppImage");
         assert_eq!(hash, second);
     }
 
     #[test]
     fn rejects_path_traversal_assets() {
-        let checksums = format!("{}  ../SetupMate-0.2.0-x86_64.AppImage\n", "a".repeat(64));
+        let checksums = format!("{}  ../SetupMate-0.1.0-x86_64.AppImage\n", "a".repeat(64));
         assert!(select_asset(&checksums, "x86_64").is_none());
     }
 
     #[test]
     fn extracts_versions_from_asset_names() {
         assert_eq!(
-            version_from_asset("SetupMate-0.2.0-x86_64.AppImage").as_deref(),
-            Some("0.2.0")
+            version_from_asset("SetupMate-0.1.0-x86_64.AppImage").as_deref(),
+            Some("0.1.0")
         );
         assert_eq!(version_from_asset("SetupMate-x86_64.AppImage"), None);
     }
@@ -369,9 +369,9 @@ mod tests {
     #[test]
     fn compares_versions_numerically() {
         assert!(is_newer("0.10.0", "0.9.9"));
-        assert!(is_newer("0.2.1", "0.2.0"));
-        assert!(!is_newer("0.2.0", "0.2.0"));
-        assert!(!is_newer("0.1.9", "0.2.0"));
+        assert!(is_newer("0.1.1", "0.1.0"));
+        assert!(!is_newer("0.1.0", "0.1.0"));
+        assert!(!is_newer("0.0.9", "0.1.0"));
         assert!(is_newer("v1.0.0", "0.9.0"));
     }
 }

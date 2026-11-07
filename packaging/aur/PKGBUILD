@@ -1,10 +1,10 @@
-# Maintainer: stegizm <stegizm@users.noreply.github.com>
+# Maintainer: Stegizm <muhammetayaz755@gmail.com>
 pkgname=setupmate
-pkgver=0.2.0
+pkgver=0.1.0
 pkgrel=1
 pkgdesc="Güvenli Linux kurulum rehberi (GUI)"
 arch=('x86_64' 'aarch64')
-url="https://github.com/stegizm/SetupMate"
+url="https://github.com/Stegizm/SetupMate"
 license=('MIT')
 depends=(
   'gcc-libs'
@@ -20,7 +20,7 @@ depends=(
 )
 makedepends=('rust' 'gcc' 'pkgconf')
 source=("$pkgname-$pkgver.tar.gz::$url/archive/refs/tags/v$pkgver.tar.gz")
-sha256sums=('ab378c14fc17d347426c7865fa7c63703aa8121ec4dfd8aa174957681230e3b6')
+sha256sums=('SKIP')
 
 build() {
   cd "$srcdir/SetupMate-$pkgver"

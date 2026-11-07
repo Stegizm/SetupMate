@@ -1,8 +1,8 @@
 pkgbase = setupmate
 	pkgdesc = Güvenli Linux kurulum rehberi (GUI)
-	pkgver = 0.2.0
+	pkgver = 0.1.0
 	pkgrel = 1
-	url = https://github.com/stegizm/SetupMate
+	url = https://github.com/Stegizm/SetupMate
 	arch = x86_64
 	arch = aarch64
 	license = MIT
@@ -19,7 +19,7 @@ pkgbase = setupmate
 	depends = libxkbcommon
 	depends = wayland
 	depends = mesa
-	source = setupmate-0.2.0.tar.gz::https://github.com/stegizm/SetupMate/archive/refs/tags/v0.2.0.tar.gz
-	sha256sums = ab378c14fc17d347426c7865fa7c63703aa8121ec4dfd8aa174957681230e3b6
+	source = setupmate-0.1.0.tar.gz::https://github.com/Stegizm/SetupMate/archive/refs/tags/v0.1.0.tar.gz
+	sha256sums = SKIP
 
 pkgname = setupmate

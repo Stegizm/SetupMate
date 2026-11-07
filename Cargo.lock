@@ -2030,7 +2030,7 @@ dependencies = [
 
 [[package]]
 name = "setupmate-core"
-version = "0.2.0"
+version = "0.1.0"
 dependencies = [
  "rusqlite",
  "serde",
@@ -2039,7 +2039,7 @@ dependencies = [
 
 [[package]]
 name = "setupmate-gui"
-version = "0.2.0"
+version = "0.1.0"
 dependencies = [
  "eframe",
  "setupmate-core",
