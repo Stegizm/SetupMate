@@ -20,7 +20,7 @@ depends=(
 )
 makedepends=('rust' 'gcc' 'pkgconf')
 source=("$pkgname-$pkgver.tar.gz::$url/archive/refs/tags/v$pkgver.tar.gz")
-sha256sums=('SKIP')
+sha256sums=('ab378c14fc17d347426c7865fa7c63703aa8121ec4dfd8aa174957681230e3b6')
 
 build() {
   cd "$srcdir/SetupMate-$pkgver"

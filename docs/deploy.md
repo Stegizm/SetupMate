@@ -39,8 +39,14 @@ Release tamamlandıktan sonra güncellemeyi doğrula:
 
 ## 3. AUR paketi
 
-`packaging/aur/PKGBUILD` kaynak paketidir. GitHub release'i oluştuktan sonra
-kaynak tarball'ın gerçek özetini yaz:
+`packaging/aur/PKGBUILD` kaynak paketidir. `v0.2.0` yayınlandığında tarball
+özeti yazıldı ve `makepkg --verifysource` ile doğrulandı:
+
+```text
+sha256sums = ab378c14fc17d347426c7865fa7c63703aa8121ec4dfd8aa174957681230e3b6
+```
+
+Yeni bir sürümde özeti yenile:
 
 ```bash
 cd packaging/aur
@@ -48,7 +54,7 @@ updpkgsums
 makepkg --printsrcinfo > .SRCINFO
 ```
 
-Ardından AUR deposuna gönder:
+Ardından AUR deposuna gönder (AUR hesabına SSH anahtarı ekli olmalı):
 
 ```bash
 git clone ssh://aur@aur.archlinux.org/setupmate.git /tmp/aur-setupmate
